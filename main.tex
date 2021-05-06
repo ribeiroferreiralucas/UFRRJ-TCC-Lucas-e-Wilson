@@ -1,0 +1,114 @@
+\documentclass{projetofinal-dcc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%P A C O T E S
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Adicione aqui seus pacotes
+
+%Adicionei esse pacote pois melhora a qualidade dos espaçamentos, sem efeitos colaterais no layout do template. -- Vitor Machado
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true]{microtype}
+%Para checks e cross na tabela de comparação de frameworks de recomendação
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+\usepackage[alf]{abntex2cite}
+\usepackage{xspace}
+\newcommand*{\eg}{\textit{e.g.}\@\xspace}
+\newcommand*{\ie}{\textit{i.e.}\@\xspace}
+
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{lscape}
+
+\usepackage{breakurl}
+\def\UrlBreaks{\do\/\do-}
+
+\usepackage{tikz-uml}
+\definecolor{light-gray}{gray}{0.95}
+
+% INICIO DO DOCUMENTO
+\begin{document}
+
+% título da tese é obrigatório
+\title{WppScrapper: Uma ferramenta para a extração de mensagens do WhatsApp}
+
+% autor é obrigatório; máximo de 3 autores
+\author{Lucas Ribeiro Ferreira}{\input{elementos-pretextuais/agradecimentos-lucas}}
+\author{Wilson de Oliveira Mendonça}{\input{elementos-pretextuais/agradecimentos-wil}}
+%\author{Nome completo aluno 2}{\input{elementos-pretextuais/agradecimentos}}
+%\author{Nome completo aluno 3}{\input{elementos-pretextuais/agradecimentos}}
+
+% orientador é obrigatório
+\advisor[Prof.]{Filipe Braida do Carmo,~D.Sc.}{}
+
+% co-orientador é opcional
+% \coadvisor[Prof.]{Nome do co-orientador,~M.Sc.}{}
+
+% máximo de 3 integrantes da banca (orientador e co-orientador já são adicionados automaticamente)
+\banca[Prof.]{Bruno José Dembogurski,~D.Sc.}{}
+\banca[Profª.]{Natália Chaves Lessa Schots,~D.Sc.}{}
+%\banca[Prof.]{Nome do participante banca 3,~Ph.D.}{COPPE~-~UFRJ}
+
+\location{Nova~Iguaçu}{RJ}{Brasil}
+
+% mês e ano de defesa
+\date{Maio}{2021}
+\maketitle
+
+\startdocument
+
+% AGRADECIMENTOS
+\makethankspage
+
+% RESUMO
+\begin{abstract}{
+  \input{elementos-pretextuais/resumo}
+}
+\end{abstract}
+
+% ABSTRACT
+\begin{englishabstract}{
+  \input{elementos-pretextuais/abstract}
+}
+\end{englishabstract}
+
+% LISTAS
+%% Figuras
+\makefigurespage
+
+%% Tabelas
+\maketablespage
+
+%% Algoritmos
+% \makelistingspage
+
+%% Abreviaturas (devem estar em ordem alfabética)
+% \makeabrevpage{\input{elementos-pretextuais/abreviaturas}}
+
+%% Símbolos (devem estar em ordem alfabética)
+% \makesymbolspage{\input{elementos-pretextuais/simbolos}}
+
+% Sumário
+\maketocpage
+
+% Capítulos
+\startcontent
+\input{caps/cap1.tex}
+\input{caps/cap2.tex}
+\input{caps/cap3.tex}
+\input{caps/cap4.tex}
+\input{caps/cap5.tex}
+% \input{elementos-textuais/topico-4}
+% \input{elementos-textuais/topico-5}
+\pagebreak
+
+% BIBLIOGRAFIA
+\makebibspage{elementos-postextuais/referencias}
+
+% APÊNDICE
+
+%\appendix
+%\input{elementos-postextuais/apendice}
+
+\end{document}
